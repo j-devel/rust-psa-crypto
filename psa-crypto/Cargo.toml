@@ -2,7 +2,7 @@
 name = "psa-crypto"
 version = "0.10.1"
 authors = ["Parsec Project Contributors"]
-edition = "2018"
+edition = "2021"
 description = "Wrapper around the PSA Cryptography API"
 readme = "README.md"
 keywords = ["psa", "crypto", "cryptography", "no_std"]
