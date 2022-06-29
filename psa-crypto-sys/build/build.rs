@@ -51,7 +51,7 @@ fn minerva_update_envs() -> std::io::Result<()> {
     use std::path::PathBuf;
 
     let out_dir = PathBuf::from(env::var("OUT_DIR").unwrap());
-    panic!("out_dir: {:?}", out_dir);
+    println!("@@ out_dir: {:?}", out_dir);
     let build_dir = out_dir.parent().unwrap().parent().unwrap();
     let target = env::var("TARGET").unwrap();
     let to_mbedtls_dir = |pb: &PathBuf| {
@@ -79,6 +79,7 @@ fn minerva_update_envs() -> std::io::Result<()> {
     }
     let mbedtls_dir = to_mbedtls_dir(&pbs[0]).to_str().unwrap().to_owned();
     println!("resolved `mbedtls_dir`: {}", mbedtls_dir);
+    panic!(); // !!!!
 
     env::set_var("MBEDTLS_LIB_DIR", &format!("{}/library", mbedtls_dir));
     env::set_var("MBEDTLS_INCLUDE_DIR", &format!("{}/include", mbedtls_dir));
