@@ -25,7 +25,7 @@
 #[allow(clippy::all)]
 #[cfg(feature = "interface")]
 mod psa_crypto_binding {
-    include!(concat!(env!("OUT_DIR"), "/shim_bindings.rs"));
+    //@@//include!(concat!(env!("OUT_DIR"), "/shim_bindings.rs"));
 }
 
 mod mbedtls;
