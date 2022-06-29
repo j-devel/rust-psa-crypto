@@ -51,6 +51,7 @@ fn minerva_update_envs() -> std::io::Result<()> {
     use std::path::PathBuf;
 
     let out_dir = PathBuf::from(env::var("OUT_DIR").unwrap());
+    panic!("out_dir: {:?}", out_dir);
     let build_dir = out_dir.parent().unwrap().parent().unwrap();
     let target = env::var("TARGET").unwrap();
     let to_mbedtls_dir = |pb: &PathBuf| {
