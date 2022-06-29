@@ -79,7 +79,7 @@ fn minerva_update_envs() -> std::io::Result<()> {
     }
     let mbedtls_dir = to_mbedtls_dir(&pbs[0]).to_str().unwrap().to_owned();
     println!("resolved `mbedtls_dir`: {}", mbedtls_dir);
-    panic!(); // !!!!
+    //panic!(); // @@ LGTM
 
     env::set_var("MBEDTLS_LIB_DIR", &format!("{}/library", mbedtls_dir));
     env::set_var("MBEDTLS_INCLUDE_DIR", &format!("{}/include", mbedtls_dir));
@@ -302,8 +302,10 @@ mod operations {
         }
 
         // Linking to PSA Crypto library is only needed for the operations.
+        /* @@ !!!!
         link_to_lib(lib, statically);
         common::generate_mbed_crypto_bindings(include.clone())?;
         common::compile_shim_library(include)
+        */
     }
 }
