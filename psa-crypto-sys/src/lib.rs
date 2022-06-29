@@ -7,7 +7,7 @@
 //! You can find the API
 //! [here](https://developer.arm.com/architectures/security-architectures/platform-security-architecture/documentation).
 
-#![no_std]
+#![cfg_attr(not(feature = "std"), no_std)] // @@
 
 // This one is hard to avoid.
 #![allow(clippy::multiple_crate_versions)]

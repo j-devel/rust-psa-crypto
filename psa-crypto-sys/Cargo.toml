@@ -36,6 +36,10 @@ default = [
     # mbedtls features
     "std", "debug", "threading", "zlib", "time", "aesni", "padlock", "legacy_protocols",
 ]
+minerva-nostd = [
+    "operations",
+           "debug", "threading",         "time", "aesni", "padlock", "legacy_protocols",
+]
 static = []
 interface = []
 operations = ["interface"]
