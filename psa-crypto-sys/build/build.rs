@@ -302,10 +302,8 @@ mod operations {
         }
 
         // Linking to PSA Crypto library is only needed for the operations.
-        /* @@ !!!!
-        link_to_lib(lib, statically);
+        //@@//link_to_lib(lib, statically);
         common::generate_mbed_crypto_bindings(include.clone())?;
         common::compile_shim_library(include)
-        */Ok(())
     }
 }
